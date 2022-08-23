@@ -18,6 +18,18 @@ Feature:
       And  assert response.job == "leader"
       And  assert response.id > "10"
 
+Scenario Outline: Validate the id.
+
+    Given path 'users'
+    And request <id>
+    When method post
+    Then status 201
+
+    Examples:
+      | id        |
+      |  125458-4 |
+      | "%%%#&$"  |
+      | apple     |
 
 
 

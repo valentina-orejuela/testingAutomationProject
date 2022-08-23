@@ -26,3 +26,27 @@ Feature: Service client Get
       And assert  name + lastname == 'JanetWeaver'
       * def id = response.data.id
 
+      Scenario Outline:Validate first_name 
+
+    Given path 'users',<first_name>
+    When method get
+    Then status 404
+
+    Examples:
+      | first_name|
+      | 74.1221   |
+      | "@%%&&*&" |
+      | "apple"   |
+
+  Scenario Outline: Validate id using unsopported data types
+
+    Given path 'users',<id>
+    When method get
+    Then status 404
+
+    Examples:
+      | id        |
+      | 74.1221   |
+      | "@%%&&*&" |
+      | "apple"   |
+
