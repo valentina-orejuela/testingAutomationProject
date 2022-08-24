@@ -23,6 +23,6 @@ Feature: Service client Get
       And assert response.data.last_name == "Weaver"
       * def name = response.data.first_name
       * def lastname = response.data.last_name
-      And assert name + lastname == 'JanetWeaver'
+      And assert  name + lastname == 'JanetWeaver'
       * def id = response.data.id
 
