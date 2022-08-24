@@ -1,0 +1,21 @@
+<testsuite failures="0" name="karate/request/client_consult_get/client.feature" skipped="0" tests="1" time="1.499297">
+  <testcase classname="karate.request.client_consult_get.client" name="Check the service get method" time="1.499297">
+    <system-out>* url url ................................................................. passed
+* def responseGet = read('classpath:karate/request/client_consult_get/ResponseGet.json') . passed
+Given path 'users', '2' ................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == responseGet ......................................... passed
+And match  response..id contains [2] ...................................... passed
+And match  response.data contains {"first_name": "Janet"} ................. passed
+And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!" . passed
+And assert response.data.email == email ................................... passed
+And assert response.data.id == '2' ........................................ passed
+And assert response.data.first_name == "Janet" ............................ passed
+And assert response.data.last_name == "Weaver" ............................ passed
+* def name = response.data.first_name ..................................... passed
+* def lastname = response.data.last_name .................................. passed
+And assert name + lastname == 'JanetWeaver' ............................... passed
+* def id = response.data.id ............................................... passed</system-out>
+  </testcase>
+</testsuite>
