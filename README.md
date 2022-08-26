@@ -16,6 +16,7 @@ _Esta API nos permite probar nuestro Backend contra una API real también nos pe
 
 ## Introduction
 
+
 _En este proyecto se trabajaron pruebas automatizadas con cucumber y karate para la ejecución de secuencias de comandos especificados, utilizamos la API de la plataforma https://reqres.in/ y se implementaron los modulos de crear cliente, consultar y log in, se implementaron las buenas practicas, se implemento el camelCase para el nombramiento correcto de las carpetas, archivos y variables._
 
 ## Pre requirements
